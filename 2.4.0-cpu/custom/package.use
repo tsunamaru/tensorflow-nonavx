@@ -1,7 +1,0 @@
-dev-python/pillow imagequant jpeg lcms tiff truetupe webp truetype
-media-libs/tiff jpeg webp
-sci-libs/lapack lapacke
-media-libs/opencv contrib contribdnn contribfreetype contribhdf contribsfm ffmpeg gdal gflags glog java jpeg lto opencl opencvapps openexr opengl qt5 png tesseract threads tiff vtk webp
-dev-qt/qtgui egl eglfs
-app-text/tesseract opengl jpeg png tiff webp
-sci-libs/vtk all-modules gdal imaging java json mpi offscreen

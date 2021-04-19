@@ -1,0 +1,25 @@
+diff --git a/tensorflow/contrib/mpi_collectives/BUILD b/tensorflow/contrib/mpi_collectives/BUILD
+index a7be92a35e0d6..e2c2cd78938f7 100644
+--- a/tensorflow/contrib/mpi_collectives/BUILD
++++ b/tensorflow/contrib/mpi_collectives/BUILD
+@@ -53,6 +53,7 @@ tf_custom_op_library(
+         ":mpi_defines",
+         ":mpi_message_proto_cc",
+         "//third_party/mpi",
++        "//tensorflow/stream_executor",
+     ],
+ )
+ 
+diff --git a/tensorflow/tensorflow.bzl b/tensorflow/tensorflow.bzl
+index b13ed388632b7..0b91b8b908881 100644
+--- a/tensorflow/tensorflow.bzl
++++ b/tensorflow/tensorflow.bzl
+@@ -1770,7 +1770,7 @@ def tf_custom_op_library(name, srcs = [], gpu_srcs = [], deps = [], linkopts = [
+         name = name + "_check_deps",
+         disallowed_deps = [
+             clean_dep("//tensorflow/core:framework"),
+-            clean_dep("//tensorflow/core:lib"),
++            #clean_dep("//tensorflow/core:lib"),
+         ],
+         deps = deps + if_cuda_is_configured_compat(cuda_deps) + if_rocm_is_configured(rocm_deps),
+     )

@@ -1,0 +1,12 @@
+--- a/third_party/grpc/src/core/lib/gpr/log_linux.cc.ORIG	1980-01-01 00:00:00.000000000 +0100
++++ b/third_party/grpc/src/core/lib/gpr/log_linux.cc	2019-09-17 13:50:17.166911668 +0200
+@@ -40,7 +40,9 @@
+ #include <time.h>
+ #include <unistd.h>
+ 
++/* contained in unistd.h 
+ static long gettid(void) { return syscall(__NR_gettid); }
++*/
+ 
+ void gpr_log(const char* file, int line, gpr_log_severity severity,
+              const char* format, ...) {

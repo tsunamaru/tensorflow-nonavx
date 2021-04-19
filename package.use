@@ -1,4 +1,0 @@
-x11-drivers/nvidia-drivers X -driver -tools
-dev-util/nvidia-cuda-toolkit profiler
-sci-libs/tensorflow cuda 
-media-libs/libglvnd X
